@@ -22,10 +22,10 @@ public class BackupTest {
 		tool = new DBBackupTool();
 	}
 	
+	
 	/*
 	 * 备份select语句  在jdbcutil中配置连接以及数据库
 	 */
-	
 	public void testBackupSql(){
 		try {
 			tool.backupSql("select *from route where rid <3", "E:/b.txt");
@@ -47,7 +47,6 @@ public class BackupTest {
 	/*
 	 * 备份整个数据库  在jdbcutil中配置
 	 */
-	
 	public void testBackupDB(){
 		tool.backupDataBase("E:/a.sql");
 		//tool.backupDataBase(host, name, pwd, database, tables, filepath);//指定路径的mysql数据库备份
